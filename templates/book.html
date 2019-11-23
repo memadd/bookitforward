@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %}
+{{book.title}} 
+{% endblock %}
+{% block main %}
+  <h1>{{book.title}}</h1><br>
+  <h3>Written by {{book.author}} Donated by {{book.username}}</h3>
+  <br>
+  <div>
+      <label for="{{book.review}}">Review:</label>
+    {{book.review}}
+  </div>
+  <label for="{{book.original}}">Original:</label>
+  {{book.original}}<br>
+  <label for="{{book.price}}">Price:</label>
+  {{book.price}}<br>
+  
+    <a href="{{url_for('buy_book', bid=book.bid)}}" class="btn btn-default pull-right">Buy</a>  
+  
+{% endblock %}

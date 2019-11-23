@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}
+    Books 
+{% endblock %}
+{% block main %}
+  <h1>{{msg}}</h1>
+  <h1>books</h1>
+  <ul class="list-group">
+    {% for book in books %}
+        <li class="list-group-item">
+            <a href="books/{{book.bid}}">{{book.title}}</a>
+        </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Donate
+{% endblock %}
+
+{% block main %}
+    <form action="/donate" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="booktitle" placeholder="book title" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="author" placeholder="author" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="price" placeholder="price" type="text">
+        </div>
+        <div >
+            <label>is it original</label>
+            <div class="original">
+            <input type="radio" name="yes" value="yes"> yes<br>
+            </div>
+            <div class="original">
+            <input type="radio" name="no" value="no"> no<br>
+            </div>
+            <div class="original">
+            <input type="radio" name="dontknow" value="dontknow"> I don't know
+            </div>
+        </div>
+       
+        <br>
+        <div>
+            <textarea rows="4" cols="50" name="review" placeholder="write a review"></textarea>
+            <br><br>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    {{error}}
+{% endblock %}

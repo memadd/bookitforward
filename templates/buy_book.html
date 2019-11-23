@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}
+{{book.title}} 
+{% endblock %}
+{% block main %}
+  <h1>{{book.title}}</h1><br>
+  <h3>Written by {{book.author}} Donated by {{book.username}}</h3>
+  <br>
+  <label for="{{book.original}}">Original:</label>
+  {{book.original}}<br>
+  <label for="{{book.price}}">Price:</label>
+  {{book.price}}<br>
+  <form action="{{url_for('buy_book', bid=book.bid)}}" method="POST">
+     <button class="btn btn-primary" type="submit">Buy</button>
+  </form>
+{% endblock %}

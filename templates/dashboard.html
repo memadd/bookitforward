@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}
+    Dashboard 
+{% endblock %}
+{% block main %}
+  <h1>Dashboard </h1>
+  <small> Welcome {{session.username}}</small>
+  <a class="btn btn-success" href="/donate"> Donate</a>
+  <br> <br>
+  <h1>{{msg}}</h1>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>username</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for book in books %}
+      <tr>
+        <td>{{book.bid}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.username}}</td>
+        <td><a href="edit_book/{{book.bid}}" class="btn btn-default pull-right">Edit</a></td>
+        <td>
+          <form action="{{url_for('delete_book', bid=book.bid)}}" method="post">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete" class="btn btn-danger">
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
