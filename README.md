@@ -1,4 +1,9 @@
 # bookitforward
-website by Flask and MySQL
-features : Register - Login - Edit - Delete - Dashboard - Buy - Donate - Single_book - Books,
-templates : HTML - CSS - Bootstrap - Jinja2
+website to donate and buy books
+## features
+ Register - Login - Edit - Delete - Dashboard - Buy - Donate - Single_book - Books,
+
+### technolgy
+Flask - SqLite - HTML - CSS - Bootstrap - Jinja2
+### CS50 Final Project
+
