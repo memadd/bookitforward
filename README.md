@@ -4,6 +4,6 @@ website to donate and buy books
  Register - Login - Edit - Delete - Dashboard - Buy - Donate - Single_book - Books,
 
 ### technolgy
-Flask - SqLite - HTML - CSS - Bootstrap - Jinja2
+Flask - MySQL - HTML - CSS - Bootstrap - Jinja2
 ### CS50 Final Project
 
